@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<!-- this is for modal -->
+	<div class="modal" id="myModal">
+		<div class="box1" id="box1">
+			<div class="modal-title">
+				<i class="uil uil-multiply close" id="close1"></i>
+				<span class="play-list">Play List</span>
+			</div>
+			<div class="songs-list">
+			</div>
+		</div>
+	</div>
+
+	<!-- this is for the music player -->
+	<div class="container">
+		<i class="uil uil-list-ul list-icon" id="list"></i>
+		<h1 class="song-name">Scam 1998</h1>
+		<h3 class="artist-name">Achint Thakkar</h3>
+		<div class="song-img">
+			<img src="images/object-1.png" class="bigImg">
+		</div>
+		<audio src="music/object-1.mp3"></audio>
+
+		<!-- progress bar -->
+		<div class="progress-container">
+			<div class="progress-duration-meter">
+				<div class="current-time" id="current-time">0:00</div>
+				<div class="duration" id="duration">1:24</div>
+			</div>
+			<div class="progress-div" id="progress-div">
+				<div class="progress" id="progress"></div>
+			</div>
+		</div>
+
+
+		<!-- controls -->
+		<div class="controls">
+			<i class="icons uil uil-previous" id="prev" title="Previous"></i>
+			<i class="icons uil uil-play" id="play"></i>
+			<i class="icons uil uil-step-forward" id="next" title="Next"></i>
+		</div>
+	</div>
+
+
+	<!-- this is wave 1 down -->
+	<svg class="wave1" width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
+		<defs>
+			<path id="wavepath" d="M 0 2000 0 500 Q 150 332 300 500 t 300 0 300 0 300 0 300 0 300 0  v1000 z" />
+			<path id="motionpath" d="M -600 0 0 0" /> 
+		</defs>
+		<g >
+			<use xlink:href="#wavepath" y="-12" fill="#fc8d7a">
+				<animateMotion
+				dur="5s"
+				repeatCount="indefinite">
+				<mpath xlink:href="#motionpath" />
+			</animateMotion>
+		</use>
+	</g>
+</svg>
+<!-- this is wave 2 up-->
+<svg class="wave2" width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
+	<defs>
+		<path id="wavepath" d="M 0 2000 0 500 Q 150 332 300 500 t 300 0 300 0 300 0 300 0 300 0  v1000 z" />
+		<path id="motionpath" d="M -600 0 0 0" /> 
+	</defs>
+	<g >
+		<use xlink:href="#wavepath" y="183" fill="#fb684f">
+			<animateMotion
+			dur="5s"
+			repeatCount="indefinite">
+			<mpath xlink:href="#motionpath" />
+		</animateMotion>
+	</use>
+</g>
+</svg>
+<script src="script.js"></script>
+</body>
+</html>
